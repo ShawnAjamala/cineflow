@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,105 +15,114 @@
         <section id="promo">
             <h2>Welcome Video</h2>
             <video height="300" width="600" src="cineflow.vid.mp4">
-                <source src="cineflow.vid.mp4">https://www.pexels.com/download/video/7581382/<source>
-            
+                <source src="cineflow.vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
             </video>
-            <h3>Helpful Tips</h3>
-             
-        <audio  controls="News.mp3">
-            <source src="News.mp3" type="News.mp3">
-        </audio>
-            
 
-            </section>
+            <h3>Helpful Tips</h3>
+            <audio controls>
+                <source src="News.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
 
         <section id="registration">
-            <form action="/submit-registration" >
+            <form action="/submit-registration" method="POST" enctype="multipart/form-data">
                 
                 <fieldset>
                     <legend>Personal Information</legend>
-                    <label for="name">Name</label>
-                    <input type="text" name="" id="" >
-                    <br>
-                    <label for="email">Email</label>
-                    <input type="text">
-                    <br>
-                    <label for="gender">Gender</label>
-                    <input type="radio" name="Male" id="Male>
-                    <Label for="gender">Male</Label>
-                    <input type="radio" name="Female" id="Female">
-                    <label for="gender">Female</label>
-                    <br>
-                    <label for="email-passsword">Password</label>
-                    <input type="text" name="" id="">
                     
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
                     <br>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                    <br>
+                    
+                    <label for="gender">Gender</label>
+                    <input type="radio" name="gender" id="male" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="Female">
+                    <label for="female">Female</label>
+                    <br>
+                    
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required>
+                    <br>
+                    
                     <label for="birthdate">Birth date</label>
-                    <input type="date" name="" id="">
+                    <input type="date" name="birthdate" id="birthdate">
                     <br>
-                    <label for="profile picture">Profile Picture</label>
-                    <input type="file" accept=".jpg,.png">
+                    
+                    <label for="profile-picture">Profile Picture</label>
+                    <input type="file" name="profile-picture" id="profile-picture" accept=".jpg,.png">
                     <br>
-                    <label for="preferences">Preferences</label>
-                    <input type="checkbox" name="Coding" id="coding">
+                    
+                    <label>Preferences</label>
+                    <input type="checkbox" name="preferences" id="coding" value="Coding">
                     <label for="coding">Coding</label>
-                    <input type="checkbox" name="gaming" id="gaming">
+                    <input type="checkbox" name="preferences" id="gaming" value="Gaming">
                     <label for="gaming">Gaming</label>
-                    <input type="checkbox" name="Creativity" id="Creativity">
-                    <label for="Creativity">Creativity</label>
-                    <input type="checkbox" name="other" id="other">
+                    <input type="checkbox" name="preferences" id="creativity" value="Creativity">
+                    <label for="creativity">Creativity</label>
+                    <input type="checkbox" name="preferences" id="other" value="Other">
                     <label for="other">Other</label>
                     <br>
+                    
                     <label for="continent">Continent</label>
                     <select name="continent" id="continent">
-                        <option value="">Africa</option>
-                        <option value="">Europe</option>
-                        <option value="">Asia</option>
-                        <option value="">Americas</option>
+                        <option value="">Select a continent</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Americas">Americas</option>
                     </select>
-                    
 
-                
-
-                    </fieldset>
+                </fieldset>
 
                 <fieldset>
                     <legend>Channel Details</legend>
-                    <label for="name">Username</label>
-                    <input type="text" >
+                    
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" required>
                     <br>
-                    <label for="profile">ChannelProfile </label>
-                    <input type="file" accept=".jpg,.png">
+                    
+                    <label for="channel-profile">Channel Profile Picture</label>
+                    <input type="file" name="channel-profile" id="channel-profile" accept=".jpg,.png">
                     <br>
-                    <label for="description">Channel Bio</label>
-                    <input type="text">
+                    
+                    <label for="channel-bio">Channel Bio</label>
+                    <textarea name="channel-bio" id="channel-bio" rows="4" cols="50"></textarea>
                     <br>
-                    <label for="">Genre</label>
-                    <input type="checkbox">
-                    <label for="">Fashion</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">coding</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">sports</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">News</label>
-<input type="checkbox" name="" id="">
-<label for="">Gaming</label>
-<input type="checkbox" name="" id="">
-<label for="">Other</label>
+                    
+                    <label>Genre</label>
+                    <input type="checkbox" name="genre" id="fashion" value="Fashion">
+                    <label for="fashion">Fashion</label>
+                    <input type="checkbox" name="genre" id="genre-coding" value="Coding">
+                    <label for="genre-coding">Coding</label>
+                    <input type="checkbox" name="genre" id="sports" value="Sports">
+                    <label for="sports">Sports</label>
+                    <input type="checkbox" name="genre" id="news" value="News">
+                    <label for="news">News</label>
+                    <input type="checkbox" name="genre" id="genre-gaming" value="Gaming">
+                    <label for="genre-gaming">Gaming</label>
+                    <input type="checkbox" name="genre" id="genre-other" value="Other">
+                    <label for="genre-other">Other</label>
 
-                    </fieldset>
+                </fieldset>
 
                 <div class="form-actions">
                     <button type="submit" style="color: blue;">Register Account</button>
                     <button type="reset" style="color: blue;">Clear Form</button>
                 </div>
-                <nav>
-                    <label for="">Help</label>
-                    <a href="">shawnajamala1@gmail.com</a>
-
-                </nav>
+                
             </form>
+
+            <footer>
+                <label for="help-email">Help</label>
+                <a href="mailto:shawnajamala1@gmail.com" id="help-email">shawnajamala1@gmail.com</a>
+            </footer>
         </section>
     </main>
 
