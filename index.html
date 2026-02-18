@@ -14,7 +14,7 @@
     <main>
         <section id="promo">
             <h2>Welcome Video</h2>
-            <video height="300" width="600" src="cineflow.vid.mp4">
+            <video height="300" width="600" src="cineflow.vid.mp4" controls poster="">
                 <source src="cineflow.vid.mp4">
                 Your browser does not support the video tag.
             </video>
@@ -48,7 +48,7 @@
                     <br>
                     
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="password" required minlength="8">
                     <br>
                     
                     <label for="birthdate">Birth date</label>
@@ -85,7 +85,7 @@
                     <legend>Channel Details</legend>
                     
                     <label for="username">Username</label>
-                    <input type="text" name="username" id="username" required>
+                    <input type="text" name="username" id="username" required >
                     <br>
                     
                     <label for="channel-profile">Channel Profile Picture</label>
